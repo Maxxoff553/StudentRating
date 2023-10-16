@@ -1,7 +1,6 @@
 <?php
 //Класс для иудаления записанных записей по id 
-class DeleteController
-{
+class DeleteController {
 	static public function deleteGroup($pdo) {
 		$group_id = $_POST['group_id'];
 		$sql = ("DELETE FROM groups WHERE group_id = ?");

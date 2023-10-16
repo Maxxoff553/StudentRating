@@ -1,7 +1,6 @@
 <?php
 //Класс для изменения записанных записей 
-class UpdateController
-{
+class UpdateController {
 	static public function updateGroup($pdo) {
 		$group_name = $_POST['group_name'];
 		$group_id = $_POST['group_id'];

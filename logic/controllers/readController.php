@@ -1,7 +1,6 @@
 <?php
 //Класс для чтения данных при открытии требуемой страницы
-class ReadController
-{
+class ReadController {
 	static public function readRating($pdo) {
 		$sql = $pdo->prepare("SELECT * FROM groups");
 

@@ -1,7 +1,6 @@
 <?php
 //Класс для создания новых записей 
-class CreateController
-{
+class CreateController {
 	static public function createGroup($pdo) {
 		$group_name = $_POST['group_name'];
 		$sql = ("INSERT INTO groups (group_name) VALUES (?)");

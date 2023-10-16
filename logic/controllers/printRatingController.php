@@ -1,7 +1,6 @@
 <?php
 //Вывод баллов студентов выбранной группы
-class printRatingController
-{
+class printRatingController {
 	static public function printRating($pdo, &$sub_psdnm, &$group_choice) {
 		$group_choice = $_POST['group_id'];
 		$group_id = $_POST['group_id'];
