@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Рейтинг студентов</title>
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../src/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -86,7 +86,7 @@
                             <?php foreach ($select_data as $s_res) { ?>
                               <option value="<?php echo $s_res->group_id; ?>" 
                               <?php if($s_res->group_id === $res->group_id) echo "selected='selected'"; ?>>
-                                <?php echo $s_res->group_name; ?>
+                                <?php echo htmlspecialchars($s_res->group_name); ?>
                               </option>
                             <?php } ?>
                           </select>
@@ -156,7 +156,7 @@
               <select class="form-select" name="group_id" class="form-control">
                 <?php foreach ($select_data as $s_res) { ?>
                   <option value="<?php echo $s_res->group_id; ?>">
-                    <?php echo $s_res->group_name; ?>
+                    <?php echo htmlspecialchars($s_res->group_name); ?>
                   </option>
                 <?php } ?>
               </select>
@@ -175,7 +175,7 @@
     </div>
   </div>
 
-  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../src/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

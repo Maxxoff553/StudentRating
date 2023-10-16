@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Рейтинг студентов</title>
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../src/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -91,7 +91,7 @@
                             <?php foreach ($student_data as $stud_res) { ?>
                               <option value="<?php echo $stud_res->student_id; ?>"
                               <?php if($stud_res->student_id === $res->student_id) echo "selected='selected'"; ?>>
-                                <?php echo $stud_res->student_name; ?>
+                                <?php echo htmlspecialchars($stud_res->student_name); ?>
                               </option>
                             <?php } ?>
                           </select>
@@ -100,7 +100,7 @@
                             <?php foreach ($subject_data as $sub_res) { ?>
                               <option value="<?php echo $sub_res->subject_id; ?>"
                               <?php if($sub_res->subject_id === $res->subject_id) echo "selected='selected'"; ?>>
-                                <?php echo $sub_res->subject_name; ?>
+                                <?php echo htmlspecialchars($sub_res->subject_name); ?>
                               </option>
                             <?php } ?>
                           </select>
@@ -172,7 +172,7 @@
               <select class="form-select" name="student_id" class="form-control">
                 <?php foreach ($student_data as $stud_res) { ?>
                   <option value="<?php echo $stud_res->student_id; ?>">
-                    <?php echo $stud_res->student_name; ?>
+                    <?php echo htmlspecialchars($stud_res->student_name); ?>
                   </option>
                 <?php } ?>
               </select>
@@ -180,7 +180,7 @@
               <select class="form-select" name="subject_id" class="form-control">
                 <?php foreach ($subject_data as $sub_res) { ?>
                   <option value="<?php echo $sub_res->subject_id; ?>">
-                    <?php echo $sub_res->subject_name; ?>
+                    <?php echo htmlspecialchars($sub_res->subject_name); ?>
                   </option>
                 <?php } ?>
               </select>
@@ -198,7 +198,7 @@
       </div>
     </div>
   </div>
-  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../src/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

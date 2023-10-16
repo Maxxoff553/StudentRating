@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 15 2023 г., 21:24
+-- Время создания: Окт 16 2023 г., 08:37
 -- Версия сервера: 10.4.21-MariaDB
 -- Версия PHP: 8.0.10
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `student_rating`
+-- База данных: `studentrating`
 --
 
 -- --------------------------------------------------------
@@ -81,7 +81,8 @@ INSERT INTO `groups` (`group_id`, `group_name`) VALUES
 (2, 'ПРИб-192'),
 (4, 'ПИб-191'),
 (8, 'МОСб-191'),
-(15, 'ИВТб-192');
+(15, 'ИВТб-192'),
+(29, '<script>alert(1);</script>');
 
 -- --------------------------------------------------------
 
@@ -183,7 +184,7 @@ ALTER TABLE `grades`
 -- AUTO_INCREMENT для таблицы `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `group_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `group_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT для таблицы `student`
@@ -195,7 +196,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT для таблицы `subject`
 --
 ALTER TABLE `subject`
-  MODIFY `subject_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `subject_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

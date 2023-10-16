@@ -1,11 +1,11 @@
 <?php
 
 include_once 'db.php';
-include_once 'controls/createController.php';
-include_once 'controls/readController.php';
-include_once 'controls/updateController.php';
-include_once 'controls/deleteController.php';
-include_once 'controls/printRating.php';
+include_once 'controllers/createController.php';
+include_once 'controllers/readController.php';
+include_once 'controllers/updateController.php';
+include_once 'controllers/deleteController.php';
+include_once 'controllers/printRating.php';
 
 $uri = $_SERVER['REQUEST_URI'];
 $file_name = basename(parse_url($uri, PHP_URL_PATH));
@@ -20,9 +20,7 @@ switch ($file_name) {
 	case 'rating.php':
 		$rating_array = ReadController::readRating($pdo);
 		$page_data = $rating_array[0];
-		$group_name = $rating_array[1];
-		$group_id = $rating_array[2];
-		$thead_data = $rating_array[3];
+		$thead_data = $rating_array[1];
 		break;
 	case 'group.php':
 		$page_data = ReadController::readGroup($pdo);

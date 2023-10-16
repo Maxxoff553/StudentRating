@@ -1,7 +1,7 @@
 <?php
 
 $host = '127.0.0.1';
-$db = 'student_rating';
+$db = 'StudentRating';
 $user = 'root';
 $pass = '';
 $port = '3307';
