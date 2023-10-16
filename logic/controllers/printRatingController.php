@@ -28,5 +28,5 @@ class printRatingController {
 		$sqlrating->execute([$group_id]);
 		$rating_result = $sqlrating->fetchALL(PDO::FETCH_OBJ);
 		return $rating_result;
-}
+	}
 }
