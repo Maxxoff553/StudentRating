@@ -2,7 +2,7 @@
 //Класс для изменения записанных записей 
 class UpdateController
 {
-    static public function updateGroup($pdo) {
+	static public function updateGroup($pdo) {
 		$group_name = $_POST['group_name'];
 		$group_id = $_POST['group_id'];
 		$sql = ("UPDATE groups SET group_name = ? WHERE group_id = ?");
