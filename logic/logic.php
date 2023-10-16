@@ -1,11 +1,11 @@
 <?php
 
-include_once 'db.php';
-include_once 'controllers/createController.php';
-include_once 'controllers/readController.php';
-include_once 'controllers/updateController.php';
-include_once 'controllers/deleteController.php';
-include_once 'controllers/printRating.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/db.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/controllers/createController.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/controllers/readController.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/controllers/updateController.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/controllers/deleteController.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/controllers/printRatingController.php';
 
 $uri = $_SERVER['REQUEST_URI'];
 $file_name = basename(parse_url($uri, PHP_URL_PATH));
@@ -101,6 +101,6 @@ if (isset($_POST['delete'])) {
 
 //Вывод рейтинга в таблице по нажатию кнопки
 if (isset($_POST['rating'])) {
-	$rating_result = printRating($pdo, $sub_psdnm, $group_choice); 
+	$rating_result = printRatingController::printRating($pdo, $sub_psdnm, $group_choice);  
 }
 

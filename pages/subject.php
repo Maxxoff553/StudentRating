@@ -1,4 +1,4 @@
-<?php include_once  '../logic/logic.php';
+<?php include_once  $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/logic.php';
 ?>
 <!doctype html>
 <html lang="ru">
