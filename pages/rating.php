@@ -50,7 +50,7 @@
             Построить рейтинг
           </button>
         </form>
-
+        <!--Таблица рейтинга выбранной группы-->
         <table class="table shadow table-bordered mt-2 text-center">
           <thead class="table-dark">
             <tr>
