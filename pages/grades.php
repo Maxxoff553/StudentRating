@@ -1,7 +1,7 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/StudentRating/logic/logic.php';
 ?>
 <!doctype html>
-<html lang="ru">
+<html lang="ru"> 
 
 <head>
   <meta charset="utf-8">
