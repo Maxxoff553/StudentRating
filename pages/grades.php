@@ -51,10 +51,10 @@
             <?php foreach ($page_data as $res) { ?>
               <tr>
                 <td>
-                  <?php echo $res->grades_id; ?>
+                  <?php echo $res->grades_id;?>
                 </td>
                 <td>
-                  <?php echo $res->score; ?>
+                  <?php echo $res->score;?>
                 </td>
                 <td>
                   <?php echo htmlspecialchars($res->student_name); ?>
