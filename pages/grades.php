@@ -69,7 +69,7 @@
                     data-bs-target="#delete<?php echo $res->grades_id; ?>">Удалить</a>
                 </td>
               </tr>
-              <!--Окно обновления строки-->
+              <!--Jбновления строки-->
               <div class="modal fade" id="edit<?php echo $res->grades_id; ?>" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
